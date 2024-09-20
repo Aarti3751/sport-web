@@ -1,0 +1,151 @@
+/* Body and global styles */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Banner styling */
+.bann {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading styling */
+.hone {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin: 30px 0;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+/* Card container styling */
+#card1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual card styling */
+#card {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 23%;
+  margin: 20px;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Card hover effects */
+#card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 25px rgb(60, 60, 148);
+}
+
+/* Image frame styling */
+.frame {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+/* Image hover effects */
+#card:hover .frame {
+  transform: scale(1.1) rotate(2deg);
+  filter: brightness(110%) contrast(120%);
+}
+
+/* Caption styling */
+figcaption {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0;
+  font-weight: bold;
+  position: relative;
+  z-index: 10;
+}
+
+/* Price styling */
+.price {
+  font-size: 1.4rem;
+  color: #007bff;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Button styling */
+#btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.4s ease, transform 0.4s ease;
+  position: relative;
+  z-index: 10;
+}
+
+/* Button hover effects */
+#btn:hover {
+  background-color: #218838;
+  transform: translateY(-3px);
+}
+
+/* Button before pseudo-element for hover effect */
+#btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(40, 167, 69, 0.3), rgba(40, 167, 69, 0));
+  border-radius: 5px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Button before pseudo-element hover effect */
+#btn:hover:before {
+  opacity: 1;
+}
+
+/* Responsive styles for tablet and mobile views */
+@media (max-width: 768px) {
+  #card {
+    width: 45%;
+  }
+
+  .hone {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #card {
+    width: 100%;
+  }
+
+  .hone {
+    font-size: 1.5rem;
+  }
+}
